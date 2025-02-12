@@ -13,3 +13,8 @@ npm i echarts
 #Toggling
 Toggling on - DarkMode
 Toggling off- LightMode Default
+
+
+#Deployment URL
+
+https://vite-min-template-nmci.vercel.app/
