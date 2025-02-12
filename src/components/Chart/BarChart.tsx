@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import * as echarts from 'echarts';
 import Data from '../Assets/Manufac _ India Agro Dataset.json';
 import './BarChart.css'
@@ -86,15 +86,6 @@ const BarChart = () => {
       };
 
       chart.setOption(option);
-
-      // Resize chart when window size changes
-      window.addEventListener('resize', chart.resize);
-
-      // Cleanup on component unmount
-      return () => {
-        window.removeEventListener('resize', chart.resize);
-        chart.dispose();
-      };
     }
   }, [aggregatedData]);
 

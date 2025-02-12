@@ -16,9 +16,10 @@ interface CropData {
 const cropsData: CropData[] = Data;
 
 // Function to group data by year and find highest/lowest yielding crops
-const processDataByYear = (data: CropData[]) => {
+const processDataByYear = (data: CropData[] |null) => {
   // Group crops by year
   const groupedByYear: { [key: string]: CropData[] } = {};
+  if(data)
   data.forEach(crop => {
     if (!groupedByYear[crop.Year]) {
       groupedByYear[crop.Year] = [];
@@ -70,11 +71,12 @@ function DataTable() {
           </Table.Tr>
         </Table.Thead>
         <Table.Tbody>
+          
           {processedCrops.map((data, index) => (
             <Table.Tr key={index}>
-              <Table.Td>{data.year}</Table.Td>
-              <Table.Td>{data.highestYieldingCrop}</Table.Td>
-              <Table.Td>{data.lowestYieldingCrop}</Table.Td>
+                <Table.Td>{data?.year??'0'}</Table.Td>
+              <Table.Td>{data?.highestYieldingCrop??'0'}</Table.Td>
+              <Table.Td>{data?.lowestYieldingCrop??'0'}</Table.Td>
             </Table.Tr>
           ))}
         </Table.Tbody>
