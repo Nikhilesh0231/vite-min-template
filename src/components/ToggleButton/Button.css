@@ -1,0 +1,41 @@
+.button{
+    width: 80px;
+    height: 40px;
+    border:1px solid white;
+
+
+    border-radius: 20px;
+    position: relative;
+}
+.button1{
+    width: 80px;
+    border:1px solid black;
+
+    height: 40px;
+    border-radius: 20px;
+    position: relative;
+}
+.toggle{
+    width: 35px;
+    height: 35px;
+    border:1px solid blue;
+    border-radius: 20px;
+    background-color: blue;
+    position: absolute;
+    top: 1px;
+    cursor: pointer;
+    left: 42px;
+    transition: all 0.5s ease-out;
+}
+.toggle1{
+    width: 35px;
+    height: 35px;
+    border:1px solid blue;
+    border-radius: 20px;
+    background-color: blue;
+    position: absolute;
+    cursor: pointer;
+    top: 1px;
+    left:1px;
+    transition: all 0.5s ease-out;
+}
